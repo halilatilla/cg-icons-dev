@@ -18,9 +18,9 @@
     "build": "npm run svgr && rollup -c",
     "svgr": "svgr -d src icons",
     "semantic-release": "semantic-release --branches main",
-    "commit": "git-cz",
-    "publish": "git add . && npm run commit && git push",
-    "build-publish": "npm run build && git add . && npm run commit && git push"
+    "cz": "git-cz",
+    "publish": "git add . && npm run cz && git push",
+    "build-publish": "npm run build && git add . && npm run cz && git push"
   },
   "author": "Halil Atilla",
   "license": "MIT",
