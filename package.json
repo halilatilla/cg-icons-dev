@@ -8,6 +8,7 @@
     "Icons"
   ],
   "module": "dist/index.esm.js",
+  "main": "dist/index.esm.js",
   "files": [
     "dist"
   ],
