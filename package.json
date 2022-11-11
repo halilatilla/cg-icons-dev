@@ -19,6 +19,7 @@
     "svgr": "svgr -d src icons",
     "semantic-release": "semantic-release --branches main",
     "commit": "git-cz",
+    "publish": "git add . && npm run commit && git push",
     "build-publish": "npm run build && git add . && npm run commit && git push"
   },
   "author": "Halil Atilla",
