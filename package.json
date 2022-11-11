@@ -16,9 +16,9 @@
     "prebuild": "rimraf src && rimraf dist",
     "build": "npm run svgr && rollup -c",
     "svgr": "svgr -d src icons",
-    "semantic-release": "semantic-release --branches main",
+    "semantic-release": "semantic-release",
     "commit": "git-cz",
-    "build&publish": "npm run build && git add . && npm run commit && git push"
+    "build-publish": "npm run build && git add . && npm run commit && git push"
   },
   "author": "Halil Atilla",
   "license": "MIT",
@@ -41,13 +41,13 @@
   "dependencies": {
     "@babel/runtime": "^7.16.3"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/halilatilla/cg-icons-test.git"
-  },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/halilatilla/cg-icons-dev.git"
   }
 }
