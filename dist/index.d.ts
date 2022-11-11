@@ -1,4 +1,3 @@
-export { default as AdminTestIcon } from './AdminTest';
 export { default as AdminIcon } from './Admin';
 export { default as AnnouncementIcon } from './Announcement';
 export { default as AppleIcon } from './Apple';
