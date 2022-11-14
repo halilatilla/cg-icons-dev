@@ -6,8 +6,8 @@ import { terser } from 'rollup-plugin-terser';
 const config = {
   input: 'src/index.tsx',
   output: {
-    file: 'dist/index.esm.js',
-    format: 'esm',
+    file: 'dist/index.js',
+    format: 'cjs',
   },
   external: [/@babel\/runtime/, 'react'],
   plugins: [
