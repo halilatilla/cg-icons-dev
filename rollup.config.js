@@ -9,6 +9,7 @@ const config = [
     input: 'src/index.tsx',
     output: {
       file: 'dist/index.js',
+      format: 'esm',
     },
     external: [/@babel\/runtime/, 'react'],
     plugins: [
@@ -24,7 +25,7 @@ const config = [
   },
   {
     input: './types/index.d.ts',
-    output: [{ file: 'dist/types.d.ts' }],
+    output: [{ file: 'dist/types.d.ts', format: 'esm' }],
     plugins: [dts()],
   },
 ];
