@@ -8,8 +8,7 @@ const config = [
   {
     input: 'src/index.tsx',
     output: {
-      file: 'dist/index.esm.js',
-      format: 'esm',
+      file: 'dist/index.js',
     },
     external: [/@babel\/runtime/, 'react'],
     plugins: [
@@ -17,7 +16,6 @@ const config = [
       filesize(),
       typescript({
         clean: true,
-        rollupCommonJSResolveHack: false,
         outDir: 'types',
         useTsconfigDeclarationDir: true,
       }),
@@ -26,7 +24,7 @@ const config = [
   },
   {
     input: './types/index.d.ts',
-    output: [{ file: 'dist/index.d.ts', format: 'es' }],
+    output: [{ file: 'dist/types.d.ts' }],
     plugins: [dts()],
   },
 ];
