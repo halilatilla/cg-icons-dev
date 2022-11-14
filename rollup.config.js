@@ -1,7 +1,7 @@
 import { babel } from '@rollup/plugin-babel';
 import filesize from 'rollup-plugin-filesize';
-import typescript from 'rollup-plugin-typescript2';
 import { terser } from 'rollup-plugin-terser';
+import ts from 'rollup-plugin-ts';
 
 const config = {
   input: 'src/index.tsx',
@@ -13,10 +13,7 @@ const config = {
   plugins: [
     babel({ babelHelpers: 'runtime', plugins: ['@babel/plugin-transform-runtime'] }),
     filesize(),
-    typescript({
-      clean: true,
-      rollupCommonJSResolveHack: false,
-    }),
+    ts(),
     terser(),
   ],
 };
